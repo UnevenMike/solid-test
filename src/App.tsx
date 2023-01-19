@@ -6,11 +6,16 @@ const Multiplier: Component<{ by?: number }> = (props) => {
   const multiplier = props.by ?? 1;
 
   return (
-    <div>
+    <div class="m-2">
       <h1>
         {count()} * {multiplier} = {count() * multiplier}
       </h1>
-      <button onClick={() => setCount(count() + 1)}>Counter</button>
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white text-xs py-1 px-2 border border-blue-700 rounded"
+        onClick={() => setCount(count() + 1)}
+      >
+        Counter
+      </button>
     </div>
   );
 };
